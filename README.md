@@ -1,5 +1,4 @@
-# Augstas izšķirtspējas nacionāla mēroga sugu izplatības modelēšana: 
-# darba plūsma un rezultātu interpretācija bitēm (Hymenoptera: Antophila)
+# Augstas izšķirtspējas nacionāla mēroga sugu izplatības modelēšana: darba plūsma un rezultātu interpretācija bitēm (Hymenoptera: Antophila)
 
 Repozitorijs izveidots maģistra darba "Augstas izšķirtspējas nacionāla mēroga sugu izplatības modelēšana: 
 darba plūsma un rezultātu interpretācija bitēm (Hymenoptera: Antophila)" ietvaros. Repozitorijs nodrošina
