@@ -14,8 +14,6 @@ Vispirms nepieciešams izveidot šādas apakšdirektorijas direktorijā "Ievades
 
 - Ainava, kurā jāievieto zemāk nosauktie faili;
 
-- Rastri_10m, kurā jāievieto zemāk nosauktie faili;
-
 - References, kurā jāievieto zemāk nosauktie faili;
 
 - EGV, kurā tiks ievietoti ekoģeogrāfiskie mainīgie (EGV) un to starprezultāti, kā arī
@@ -33,9 +31,14 @@ Diemžēl nav iespējams piedāvāt šo failu tiešai lietošanai, tomēr tā iz
 
 Direktorijā "References":
 
-1) nulles_LV100m_10km.tif, failu iespējams lejupielādēt [šeit](https://github.com/aavotins/ACCGEN_LVM/tree/main/Rastri_100m)
-2) LV10m_10km.tif, failu iespējams lejupielādēt šeit [šeit](https://zenodo.org/records/14497070)
-3) tikls100_sauzeme.parquet [šeit](https://zenodo.org/records/14277114)
+1) nulles_LV100m_10km.tif
+failu iespējams lejupielādēt [šeit](https://github.com/aavotins/ACCGEN_LVM/tree/main/Rastri_100m)
+
+2) LV10m_10km.tif
+failu iespējams lejupielādēt šeit [šeit](https://zenodo.org/records/14497070)
+
+3) tikls100_sauzeme.parquet  
+failu iespējams lejupielādēt [šeit](https://zenodo.org/records/14277114)
 
 
 # Pirms darba uzsākšanas nepieciešams atbilstoši aizpildīt šādus failus:
