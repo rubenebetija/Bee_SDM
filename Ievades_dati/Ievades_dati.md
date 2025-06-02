@@ -13,12 +13,9 @@ Pētījumā izmantotajām modeļsugām tas veidots no trīs pirmajiem ģints un 
 Vispirms nepieciešams izveidot šādas apakšdirektorijas direktorijā "Ievades_dati":
 
 - Ainava, kurā jāievieto zemāk nosauktie faili;
-
 - References, kurā jāievieto zemāk nosauktie faili;
-
 - EGV, kurā tiks ievietoti ekoģeogrāfiskie mainīgie (EGV) un to starprezultāti, kā arī
 jāaizpilda EGV izvēles fails atbilstoši katras izvēlētās sugas ekoloģijai;
-
 - Noverojumi, kurā jāievieto sugu novērojumu fails un sugām raksturīgās dzīves telpas rādiusu fails.
 
 
