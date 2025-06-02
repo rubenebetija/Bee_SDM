@@ -23,7 +23,8 @@ Pārējās darbam nepieciešamās direktorijas tiks izveidotas komandrindu ietva
 
 Jāuzsver, ka repozitorijs nenodrošina iespēju precīzi reproducēt šajā pētījumā aprakstītos rezultātus, jo nav sniegta 
 publiska piekļuve izmantotajiem sugu novērojumu datiem.  Tomēr tas jebkuram interesentam piedāvā pielietošanai pētījumā 
-izstrādāto darba plūsmu visā analīzes gaitā. Attiecīgi daļa no ievades datu sagatavošanas ir konkrētā replicētāja uzdevums, to sagatavošanas un aizpildīšanas vadlīnijas pieejamas [šeit](./Ievades_dati.md) 
+izstrādāto darba plūsmu visā analīzes gaitā. Attiecīgi daļa no ievades datu sagatavošanas ir konkrētā replicētāja uzdevums, to sagatavošanas un 
+aizpildīšanas vadlīnijas pieejamas [šeit](./Ievades_dati/Ievades_dati.md) 
 
 Repozitorijs arī nenodrošina pilnīgi visu šajā pētījumā izmantoto vidi raksturojošo failu pieejamību, jo trīs no papildus izstrādātajiem
 EGV veidoti, izmantojot datus, kas nav publiski pieejami, tomēr ir pieejama šo EGV
