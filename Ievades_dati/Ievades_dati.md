@@ -3,8 +3,8 @@
 Šī darba plūsma sagatavota tā, lai tā būtu izpildāma visām izvēlētajām sugām, neatkarīgi no to skaita,
 tomēr tā pieņem konkrēt datu struktūru, kas atbilst pētījumā izmantoto modeļsugu datu struktūrai.
 
-Katrai sugai nepieciešams piešķirt unikālu kodu. Pētījumā izmantotajām modeļsugām tas veidots no trīs
-pirmajiem ģints un trīs pirmajiem sugas epiteta burtiem:
+Katrai sugai nepieciešams piešķirt unikālu kodu, kas tiks izmantots ievades failu aizpildīšanai.
+Pētījumā izmantotajām modeļsugām tas veidots no trīs pirmajiem ģints un trīs pirmajiem sugas epiteta burtiem:
 
 - ANDHAT - pētereņu smilšbite *Andrena hattorfiana*
 - DASHIR - bikšainā grumbuļbite *Dasypoda hirtipes*
