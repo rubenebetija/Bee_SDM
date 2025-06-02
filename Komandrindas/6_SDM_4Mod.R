@@ -77,8 +77,8 @@ testam1 <- testam1 %>%
   dplyr::select(Kods, X, Y)
 
 # Saglabāju 
-write_parquet(testam1, "../Rezultati/",suga,"/Dati/PresenceTest_",suga,".parquet")
-write_parquet(apmacibai1, "../Rezultati/",suga,"/Dati/PresenceTrain_",suga,".parquet")
+write_parquet(testam1,paste0("../Rezultati/",suga,"/Dati/PresenceTest_",suga,".parquet"))
+write_parquet(apmacibai1, paste0 ("../Rezultati/",suga,"/Dati/PresenceTrain_",suga,".parquet"))
 
 rm(noverojumi1)
 
@@ -109,8 +109,8 @@ testam2 <- testam2 %>%
   dplyr::select(Kods, X, Y)
 
 # Saglabāju 
-write_parquet(testam2, "../Rezultati/",suga,"/Dati/PresenceTest_filtered_",suga,".parquet")
-write_parquet(apmacibai2, "../Rezultati/",suga,"/Dati/PresenceTrain_filtered_",suga,".parquet")
+write_parquet(testam2,paste0("../Rezultati/",suga,"/Dati/PresenceTest_filtered_",suga,".parquet"))
+write_parquet(apmacibai2,paste0("../Rezultati/",suga,"/Dati/PresenceTrain_filtered_",suga,".parquet"))
 
 rm(noverojumi2)
 
@@ -141,8 +141,8 @@ fons_testam1 <- fons_testam1 %>%
   dplyr::select(-rinda)
 
 # Saglabāju
-write_parquet(fons_testam1, "../Rezultati/",suga,"/Dati/BackgroundTest_",suga,".parquet")
-write_parquet(fons_apmacibai1, "../Rezultati/",suga,"/Dati/BackgroundTrain_",suga,".parquet")
+write_parquet(fons_testam1, paste0("../Rezultati/",suga,"/Dati/BackgroundTest_",suga,".parquet"))
+write_parquet(fons_apmacibai1,paste0("../Rezultati/",suga,"/Dati/BackgroundTrain_",suga,".parquet"))
 
 #fons_testam1 <- read_parquet("../Rezultati/",suga,"/Dati/BackgroundTest_",suga,".parquet")
 #fons_apmacibai1 <- read_parquet("../Rezultati/",suga,"/Dati/BackgroundTrain_",suga,".parquet")
@@ -169,8 +169,8 @@ fons_testam2 <- fons_testam2 %>%
   dplyr::select(-rinda)
 
 # Saglabāju
-write_parquet(fons_testam2, "../Rezultati/",suga,"/Dati/BackgroundTest_beebias_",suga,".parquet")
-write_parquet(fons_apmacibai2, "../Rezultati/",suga,"/Dati/BackgroundTrain_beebias_",suga,".parquet")
+write_parquet(fons_testam2, paste0("../Rezultati/",suga,"/Dati/BackgroundTest_beebias_",suga,".parquet"))
+write_parquet(fons_apmacibai2, paste0("../Rezultati/",suga,"/Dati/BackgroundTrain_beebias_",suga,".parquet"))
 
 #fons_testam2 <- read_parquet("../Rezultati/",suga,"/Dati/BackgroundTest_beebias_",suga,".parquet")
 #fons_apmacibai2 <- read_parquet("../Rezultati/",suga,"/Dati/BackgroundTrain_beebias_",suga,".parquet")
@@ -197,8 +197,8 @@ fons_testam3 <- fons_testam3 %>%
   dplyr::select(-rinda)
 
 # Saglabāju
-write_parquet(fons_testam3, "../Rezultati/",suga,"/Dati/BackgroundTest_spbias_",suga,".parquet")
-write_parquet(fons_apmacibai3, "../Rezultati/",suga,"/Dati/BackgroundTrain_spbias_",suga,".parquet")
+write_parquet(fons_testam3, paste0("../Rezultati/",suga,"/Dati/BackgroundTest_spbias_",suga,".parquet"))
+write_parquet(fons_apmacibai3, paste0 ("../Rezultati/",suga,"/Dati/BackgroundTrain_spbias_",suga,".parquet"))
 
 #fons_testam3 <- read_parquet("../Rezultati/",suga,"/Dati/BackgroundTest_spbias_",suga,".parquet")
 #fons_apmacibai3 <- read_parquet("../Rezultati/",suga,"/Dati/BackgroundTrain_spbias_",suga,".parquet")
@@ -216,7 +216,7 @@ egv_faili=data.frame(egv_fails=list.files(path="../Ievades_dati/EGV/EGV_faili/",
                      egv_cels=list.files(path="../Ievades_dati/EGV/EGV_faili/",
                                          pattern=".tif$",full.names = TRUE))
 
-egv_izvelei=read_excel("../Rezultati/",suga,"/EGV_izvele/EGV_",suga,".xlsx")
+egv_izvelei=read_excel(paste0("../Rezultati/",suga,"/EGV_izvele/EGV_",suga,".xlsx"))
 
 egv_izvelei2=egv_izvelei %>% 
   filter(!is.na(sakumVIF))
@@ -238,7 +238,7 @@ rm(egv_faili,egv_izvelei,egv_izvelei2)
 # Modelēšana ----
 
 # Rezultātu saglabāšanai
-dir.create("../Rezultati/",suga,"/Modeli")
+dir.create(paste0("../Rezultati/",suga,"/Modeli"))
 
 
 
@@ -270,18 +270,18 @@ mod1 <- train(method = "Maxnet",
 
 # saglabāju
 write_rds(mod1,paste0("../Rezultati/",suga,"/Modeli/Modelis1_visidati_",suga,".RDS"))
-#mod1 <- readRDS("../Rezultati/",suga,"/Modeli/Modelis1_visidati_",suga,".RDS")
+#mod1 <- readRDS(paste0("../Rezultati/",suga,"/Modeli/Modelis1_visidati_",suga,".RDS"))
 
 # kombinetais
 mod1_comb <- combineCV(mod1)
 write_rds(mod1_comb,paste0("../Rezultati/",suga,"/Modeli/Modelis1_visidati_Comb_",suga,".RDS"))
-#mod1_comb <- readRDS("../Rezultati/",suga,"/Modeli/Modelis1_visidati_Comb_",suga,".RDS")
+#mod1_comb <- readRDS(paste0("../Rezultati/",suga,"/Modeli/Modelis1_visidati_Comb_",suga,".RDS"))
 
 
 # Prognoze
 # dalot telpu daļās
 tks_rezgis <- sfarrow::st_read_parquet("../Ievades_dati/References/tks93_50km.parquet")
-dir.create("../Rezultati/",suga,"/Modelis1_proj")
+dir.create(paste0("../Rezultati/",suga,"/Modelis1_proj"))
 lapas <- levels(factor(tks_rezgis$NUMURS))
 for(i in seq_along(lapas)){
   print(i)
@@ -303,8 +303,8 @@ for(i in seq_along(lapas)){
 }
 slani=list.files("../Rezultati/",suga,"/Modelis1_proj/",full.names=TRUE)
 virt_slani=terra::vrt(slani)
-writeRaster(virt_slani,"../Rezultati/",suga,"/Modeli/Modelis1_HSmap_",suga,".tif", overwrite = TRUE)
-projekcija=rast("../Rezultati/",suga,"/Modeli/Modelis1_HSmap_",suga,".tif")
+writeRaster(virt_slani,paste0("../Rezultati/",suga,"/Modeli/Modelis1_HSmap_",suga,".tif", overwrite = TRUE))
+projekcija=rast(paste0("../Rezultati/",suga,"/Modeli/Modelis1_HSmap_",suga,".tif"))
 plot(projekcija)
 
 
@@ -357,15 +357,15 @@ mod2 <- train(method = "Maxnet",
 
 # saglabāju
 write_rds(mod2,paste0("../Rezultati/",suga,"/Modeli/Modelis2_filter_",suga,".RDS"))
-#mod2 <- readRDS("../Rezultati/",suga,"/Modeli/Modelis2_filter_",suga,".RDS")
+#mod2 <- readRDS(paste0("../Rezultati/",suga,"/Modeli/Modelis2_filter_",suga,".RDS"))
 
 # kombinetais
 mod2_comb <- combineCV(mod2)
 write_rds(mod2_comb,paste0("../Rezultati/",suga,"/Modeli/Modelis2_filter_Comb_",suga,".RDS"))
-#mod2_comb <- readRDS("../Rezultati/",suga,"/Modeli/Modelis2_filter_Comb_",suga,".RDS")
+#mod2_comb <- readRDS(paste0("../Rezultati/",suga,"/Modeli/Modelis2_filter_Comb_",suga,".RDS"))
 
 # Prognoze
-dir.create("../Rezultati/",suga,"/Modelis2_proj")
+dir.create(paste0("../Rezultati/",suga,"/Modelis2_proj"))
 lapas=levels(factor(tks_rezgis$NUMURS))
 for(i in seq_along(lapas)){
   print(i)
@@ -387,7 +387,7 @@ for(i in seq_along(lapas)){
 }
 slani=list.files("../Rezultati/",suga,"/Modelis2_proj/",full.names=TRUE)
 virt_slani=terra::vrt(slani)
-writeRaster(virt_slani,"../Rezultati/",suga,"/Modeli/Modelis2_HSmap_",suga,".tif")
+writeRaster(virt_slani,paste0("../Rezultati/",suga,"/Modeli/Modelis2_HSmap_",suga,".tif"))
 projekcija=rast("../Rezultati/",suga,"/Modeli/Modelis2_HSmap_",suga,".tif")
 plot(projekcija)
 
@@ -468,7 +468,7 @@ for(i in seq_along(lapas)){
 }
 slani=list.files("../Rezultati/",suga,"/Modelis3_proj/",full.names=TRUE)
 virt_slani=terra::vrt(slani)
-writeRaster(virt_slani,"../Rezultati/",suga,"/Modeli/Modelis3_HSmap_",suga,".tif", overwrite = TRUE)
+writeRaster(virt_slani,paste0("../Rezultati/",suga,"/Modeli/Modelis3_HSmap_",suga,".tif", overwrite = TRUE))
 projekcija=rast("../Rezultati/",suga,"/Modeli/Modelis3_HSmap_",suga,".tif")
 plot(projekcija)
 
@@ -550,7 +550,7 @@ for(i in seq_along(lapas)){
 }
 slani=list.files("../Rezultati/",suga,"/Modelis4_proj/",full.names=TRUE)
 virt_slani=terra::vrt(slani)
-writeRaster(virt_slani,"../Rezultati/",suga,"/Modeli/Modelis4_HSmap_",suga,".tif", overwrite = TRUE)
+writeRaster(virt_slani,paste0("../Rezultati/",suga,"/Modeli/Modelis4_HSmap_",suga,".tif", overwrite = TRUE))
 projekcija=rast("../Rezultati/",suga,"/Modeli/Modelis4_HSmap_",suga,".tif")
 plot(projekcija)
 

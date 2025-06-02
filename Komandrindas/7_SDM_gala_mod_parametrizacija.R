@@ -221,7 +221,7 @@ for(i in seq_along(lapas)){
 }
 slani=list.files("../Rezultati/",suga,"/Modelis5_projs/",full.names=TRUE)
 virt_slani=terra::vrt(slani)
-writeRaster(virt_slani,"../Rezultati/",suga,"/Modeli/Modelis5_HSmap_",suga,".tif", overwrite = TRUE)
+writeRaster(virt_slani,paste0("../Rezultati/",suga,"/Modeli/Modelis5_HSmap_",suga,".tif", overwrite = TRUE))
 projekcija=rast("../Rezultati/",suga,"/Modeli/Modelis5_HSmap_",suga,".tif")
 plot(projekcija)
 
