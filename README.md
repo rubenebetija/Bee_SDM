@@ -32,4 +32,4 @@ izveidošanas gaita un tās procesā pieņemtie lēmumi. Visi vidi raksturojoši
 darba plūsmā – pēc EGV izvēles sagataves aizpildīšanas to lejupielādi un ievietošanu atbilstošajās direktorijās nodrošina
 komandrindas.
 
-
+Tests
